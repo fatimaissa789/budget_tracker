@@ -53,7 +53,7 @@ function CategoryPicker({ type, onChange }: Props) {
         <Button
           variant={"outline"}
           role="combobox"
-          aria-expended={open}
+          aria-expanded={open}
           className="w-[200px] justify-between"
         >
           {selectedCategory ? (

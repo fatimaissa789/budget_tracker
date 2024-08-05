@@ -113,7 +113,7 @@ function CreateCategoryDialog({ type, successCallback,trigger }: Props) {
            
           </DialogTitle>
           <DialogDescription>
-            C'est ici que vous pouvez ajouter une nouvelle catégorie
+            C&apos;est ici que vous pouvez ajouter une nouvelle catégorie
           </DialogDescription>
         </DialogHeader>
         <Form {...form}>
@@ -128,7 +128,7 @@ function CreateCategoryDialog({ type, successCallback,trigger }: Props) {
                     <Input placeholder="Catégorie" {...field} />
                   </FormControl>
                   <FormDescription>
-                    Voici comment votre catégorie apparaîtra dans l'application
+                    Voici comment votre catégorie apparaîtra dans l&apos;application
                   </FormDescription>
                 </FormItem>
               )}
@@ -177,7 +177,7 @@ function CreateCategoryDialog({ type, successCallback,trigger }: Props) {
                     </Popover>
                   </FormControl>
                   <FormDescription>
-                    Voici comment votre catégorie apparaîtra dans l'application
+                    Voici comment votre catégorie apparaîtra dans l&apos;application
                   </FormDescription>
                 </FormItem>
               )}

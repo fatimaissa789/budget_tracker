@@ -66,7 +66,7 @@ function CategoriesCard({ formatter, type, data }: {
           <div className="flex h-60 w-full flex-col items-center justify-center">
             Aucune donnée selectonnee
             <p className="text-sm text-muted-foreground">
-              Essayez de sélectionner une période différente ou essayez d'ajouter nouvelle {""}
+              Essayez de sélectionner une période différente ou essayez d&apos;ajouter nouvelle {""}
               {type === "revenue" ? "revenues" : "depenses"}
             </p>
           </div>

@@ -171,7 +171,7 @@ function History({ UserSettings }: { UserSettings: UserSettings }) {
               >
                 Aucune donnée
                 <p className="text-sm text-muted-foreground">
-                  Essayez de sélectionner une période différente ou d'ajouter de
+                  Essayez de sélectionner une période différente ou d&apos;ajouter de
                   nouvelles transactions{" "}
                 </p>
               </Card>
