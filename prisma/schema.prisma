@@ -9,6 +9,65 @@ generator client {
 }
 
 datasource db {
+ 
   provider = "postgresql"
-  url      = env("DATABASE_URL")
+  url = env("POSTGRES_PRISMA_URL") // uses connection pooling
+  directUrl = env("POSTGRES_URL_NON_POOLING") // uses a direct connection
+}
+
+
+model UserSettings{
+  userId String @id
+  currency String
+}
+
+
+model Category {
+  
+  createdAt DateTime @default(now())
+  name String
+  userId String
+  icon String
+  type String @default("revenue")
+
+
+  @@unique([name,userId,type])
+}
+
+
+model Transaction {
+ id String @id @default(uuid())
+ createdAt  DateTime @default(now())
+ updateAt DateTime @default(now())
+
+ amount Float
+ description String
+ date DateTime
+ userId String
+ type  String @default("revenue")
+ category String
+ categoryIcon String
+}
+
+
+
+model MonthHistory {
+  userId  String
+  day Int
+  month Int
+  year Int
+  income Float
+  expense Float
+
+  @@id([day,month,year,userId])
+}
+model YearHistory {
+  userId  String
+ 
+  month Int
+  year Int
+  income Float
+  expense Float
+
+  @@id([month,year,userId])
 }
